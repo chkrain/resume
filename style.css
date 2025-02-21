@@ -3,12 +3,21 @@
     src: url(fonts/minecraft-ten-font-cyrillic.ttf);
 }
 
+@font-face {
+    font-family: 'Consolas';
+    src: url(fonts/consolas.ttf);
+}
+
 html,
 body {
     margin: 0;
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 1);
     color: rgba(230, 255, 83, 1);
+}
+
+html {
+    scroll-behavior: auto !important;
 }
 
 .resume {
@@ -41,21 +50,6 @@ body {
     width: 100dvw;
 }
 
-header {
-    width: 92dvw;
-    height: 8dvh;
-    border-radius: 25px;
-    background-color: rgba(128, 0, 255, 1);
-    display: flex;
-    margin-top: 2dvh;
-}
-
-header ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .section-1 {
     justify-content: center;
     align-items: unset;
@@ -63,22 +57,24 @@ header ul {
 
 .main-card {
     width: 66dvw;
-    height: 80dvh;
+    height: 67dvh;
     border-radius: 30px;
     background-color: rgba(128, 0, 255, 1);
     margin-left: 9dvw;
-    margin-top: 14dvh;
+    margin-top: 24dvh;
     position: relative;
+    z-index: 1;
 }
 
 .animated-text {
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-family: Consolas;
     border-right: 2px solid black;
     display: inline-block;
     white-space: wrap;
     overflow: hidden;
     max-width: 33dvw;
+    z-index: 1;
 }
 
 .myname,
@@ -90,6 +86,7 @@ header ul {
     border: 0;
     margin: 0;
     transition: all .2s ease-in;
+    z-index: 1;
 }
 
 .myname {
@@ -116,8 +113,8 @@ header ul {
 
 header {
     position: absolute;
-    width: calc(2dvw + 16px);
-    height: calc(2dvw + 16px);
+    width: calc(3dvw + 16px);
+    height: calc(3dvw + 16px);
     background: rgba(128, 0, 255, 1);
     display: flex;
     align-items: center;
@@ -126,7 +123,8 @@ header {
     transition: all .3s ease;
     overflow: hidden;
     border-radius: 0;
-    transform: rotate(45deg);
+    top: 6svh;
+    /* transform: rotate(45deg); */
 }
 
 .header-menu {
@@ -137,16 +135,16 @@ header {
 }
 
 header.open {
-    width: 80dvw;
-    height: 4.6dvh;
+    width: 85dvw;
+    height: 7.8dvh;
     transform: rotate(0);
-    border-radius: 10px;
+    border-radius: 25px;
     transition: all .3s ease-in-out;
 }
 
 header.open .header-menu {
     opacity: 1;
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -172,6 +170,12 @@ header.open .header-menu {
     height: 100%;
     cursor: pointer;
     z-index: 1;
+    transition: all .5s ease;
+}
+
+#toggleBtn:hover {
+    transform: scale(1.2);
+    transition: all .5s ease;
 }
 
 #toggleBtn::before,
@@ -185,12 +189,12 @@ header.open .header-menu {
 
 #toggleBtn::before {
     height: 100%;
-    width: 20%;
+    width: 30%;
     transform: rotate(0deg);
 }
 
 #toggleBtn::after {
-    height: 20%;
+    height: 30%;
     width: 100%;
 }
 
@@ -217,12 +221,29 @@ header.open #toggleBtn::after {
 
 .engineer {
     top: -8dvh;
-    left: 2dvw;
+    left: -12dvw;
 }
 
 .about-me {
     bottom: -8dvh;
     left: 2dvw;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me img {
+    transform: translateY(4dvw) rotate(90deg);
+    transition: all .3s ease;
+}
+
+.about-me a {
+    margin: 0;
+    padding: 0;
+}
+
+.about-me a:hover img {
+    transform: translateY(4.4dvw) rotate(90deg);
+    transition: all .3s ease;
 }
 
 h2 {
@@ -274,4 +295,111 @@ h2 {
     .about-me {
         left: 8dvw;
     }
+}
+
+.cont-1-1,
+.cont-1-2 {
+    position: absolute;
+    z-index: 0;
+}
+
+.cont-1-2 {
+    left: calc(89dvw - 18px);
+    top: 24dvh;
+}
+
+.cont-1-1 {
+    right: 78dvw;
+    bottom: 10dvh;
+}
+
+@media screen and (max-width: 1280px) {
+    .cont-1-2 {
+        left: calc(89dvw - 18px);
+        top: 24dvh;
+    }
+
+    .cont-1-1 {
+        right: calc(78dvw + 2px);
+    }
+}
+
+/* ---------------------- 2 -------------------- */
+
+.section-2 .lrg-2 {
+    transform: scale(1.5);
+}
+
+.in-text {
+    position: relative;
+    margin-left: -24dvw;
+}
+
+.in-text h3 {
+    position: absolute;
+    top: 0;
+}
+
+.cont-2 {
+    position: absolute;
+    bottom: 20dvh;
+    left: 75dvw;
+}
+
+.arr-2 {
+    position: absolute;
+    top: 40dvh;
+    left: 80dvw;
+}
+
+/* ------------- 3 ----------------- */
+
+.experience {
+    position: absolute;
+    top: 0;
+    left: 120dvw;
+}
+
+.gde-to {
+    position: relative;
+    margin-left: 26dvw;
+}
+
+.lrg-3 {
+    transform: scale(1.5);
+}
+
+h3 {
+    color: rgba(0, 0, 0, 1);
+    font-family: Consolas;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.gde-to h3 {
+    position: absolute;
+    top: 0;
+}
+
+.s-cho-1,
+.s-cho-2 {
+    position: absolute;
+}
+
+.s-cho-1 {
+    top: 34dvh;
+    right: 79dvw;
+}
+
+.s-cho-2 {
+    top: 38dvh;
+    right: 81dvw;
+}
+
+.s-2-v {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    top: 10dvw;
 }

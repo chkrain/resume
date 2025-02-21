@@ -18,30 +18,50 @@
             <header id="header">
                 <button id="toggleBtn"></button>
                 <nav class="header-menu">
-                    <a href="#">about</a>
-                    <a href="#">experience</a>
+                    <a href="#about">about</a>
+                    <a href="#experience">experience</a>
                     <a href="#">tools</a>
                     <a href="#">projects</a>
                     <a href="#">contact</a>
                 </nav>
             </header>
             <div class="main-card">
-                <div class="engineer"><h2>frontend engineer</h2></div>
-                <div class="about-me"><h2>about</h2></div>
+                <div class="engineer">
+                    <h2>frontend engineer</h2>
+                </div>
+                <div class="about-me">
+                    <h2 id="about">about</h2><a href="#about"><img src="image/arr.svg" alt=""></a>
+                </div>
                 <div class="chto"><img src="/image/chto.svg" alt=""></div>
                 <div class="text-from-me">
                     <span class="myname">Ainur:~$&nbsp;</span>
                     <h1 class="animated-text">n</h1>
                 </div>
             </div>
-
+            <img class="cont-1-2" src="image/norm.svg" alt="">
+            <img class="cont-1-1" src="image/norm.svg" alt="">
         </section>
         <div class=" horizontal-wrapper">
             <div class="horizontal">
                 <section class="section section-2">
-
+                    <div class="in-text">
+                        <img class="lrg-2" src="image/lrg-2-s.svg" alt="">
+                        <h3>11111111111111111111111111
+                        </h3>
+                    </div>
+                    <img class="cont-2" src="image/yoo.svg" alt="">
+                    <a class="arr-2" href="#experience" data-direction="next"><img src="image/arr.svg" alt=""></a>
                 </section>
-                <section class=" section section-3">Раздел 3</section>
+                <section class=" section section-3">
+                    <h2 id="experience" class="experience">experience</h2>
+                    <div class="gde-to">
+                        <img class="lrg-3" src="image/lrg-3.svg" alt="">
+                        <h3>1111111111111111111111111111
+                        </h3>
+                    </div>
+                    <img class="s-cho-1" src="/image/chto.svg" alt=""><img class="s-cho-2" src="/image/chto.svg" alt="">
+                    <img class="s-2-v" src="image/s-2-v.svg" alt="">
+                </section>
             </div>
         </div>
         <section class=" section section-4">Раздел 4</section>
@@ -52,14 +72,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 
     <script>
         document.getElementById("toggleBtn").addEventListener("click", function () {
             document.getElementById("header").classList.toggle("open");
         });
-
     </script>
+
 
     <script>
         const words = ["привет!", "меня зовут Айнур", "представляю своё резюме", "листай вниз :-)"];
@@ -116,7 +137,7 @@
         gsap.registerPlugin(ScrollTrigger)
 
         let horizontal = document.querySelector('.horizontal')
-        let sections = gsap.utils.toArray('.horizontal .section') 
+        let sections = gsap.utils.toArray('.horizontal .section')
 
         gsap.to(horizontal, {
             x: () => `-${horizontal.scrollWidth - window.innerWidth}px`,
@@ -124,7 +145,7 @@
             scrollTrigger: {
                 trigger: '.horizontal-wrapper',
                 start: 'top top',
-                end: () => `+=${horizontal.scrollWidth - window.innerWidth}`, 
+                end: () => `+=${horizontal.scrollWidth - window.innerWidth}`,
                 pin: true,
                 scrub: 1,
                 anticipatePin: 1

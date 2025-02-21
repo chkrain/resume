@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenis + GSAP Scroll</title>
+    <title>My resume</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -49,7 +49,6 @@
         <section class="section section-6">Раздел 6</section>
     </div>
 
-    <!-- Подключаем Lenis и GSAP через CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -104,7 +103,6 @@
     </script>
 
     <script>
-        // Инициализация Lenis
         const lenis = new Lenis({
             smooth: true
         })
@@ -115,19 +113,18 @@
         }
         requestAnimationFrame(raf)
 
-        // Инициализация GSAP + ScrollTrigger
         gsap.registerPlugin(ScrollTrigger)
 
         let horizontal = document.querySelector('.horizontal')
-        let sections = gsap.utils.toArray('.horizontal .section') // Только горизонтальные секции
+        let sections = gsap.utils.toArray('.horizontal .section') 
 
         gsap.to(horizontal, {
-            x: () => `-${horizontal.scrollWidth - window.innerWidth}px`, // Двигаем на точное расстояние
+            x: () => `-${horizontal.scrollWidth - window.innerWidth}px`,
             ease: 'none',
             scrollTrigger: {
                 trigger: '.horizontal-wrapper',
                 start: 'top top',
-                end: () => `+=${horizontal.scrollWidth - window.innerWidth}`, // Корректный конец анимации
+                end: () => `+=${horizontal.scrollWidth - window.innerWidth}`, 
                 pin: true,
                 scrub: 1,
                 anticipatePin: 1

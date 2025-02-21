@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url(fonts/minecraft-ten-font-cyrillic.ttf);
+}
+
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(230, 255, 83, 1);
+}
+
+.resume {
+    width: 100dvw;
+}
+
+.section {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.horizontal-wrapper {
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.horizontal {
+    display: flex;
+    height: 100%;
+    width: 200dvw;
+}
+
+.horizontal .section {
+    width: 100dvw;
+}
+
+header {
+    width: 92dvw;
+    height: 8dvh;
+    border-radius: 25px;
+    background-color: rgba(128, 0, 255, 1);
+    display: flex;
+    margin-top: 2dvh;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-1 {
+    justify-content: center;
+    align-items: unset;
+}
+
+.main-card {
+    width: 66dvw;
+    height: 80dvh;
+    border-radius: 30px;
+    background-color: rgba(128, 0, 255, 1);
+    margin-left: 9dvw;
+    margin-top: 14dvh;
+    position: relative;
+}
+
+.animated-text {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border-right: 2px solid black;
+    display: inline-block;
+    white-space: wrap;
+    overflow: hidden;
+    max-width: 33dvw;
+}
+
+.myname,
+.animated-text {
+    font-family: Consolas;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 74px;
+    border: 0;
+    margin: 0;
+    transition: all .2s ease-in;
+}
+
+.myname {
+    position: absolute;
+    display: contents;
+    white-space: nowrap;
+}
+
+.animated-text::after {
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 60px;
+    background: rgba(230, 255, 83, 1);
+}
+
+.text-from-me {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 30%;
+    margin-top: 8dvh;
+}
+
+header {
+    position: absolute;
+    width: calc(2dvw + 16px);
+    height: calc(2dvw + 16px);
+    background: rgba(128, 0, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.4s ease-in-out;
+    transition: all .3s ease;
+    overflow: hidden;
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+.header-menu {
+    display: none;
+    opacity: 0;
+    transition: all .3s ease;
+    transition: opacity 0.3s ease-in-out;
+}
+
+header.open {
+    width: 80dvw;
+    height: 4.6dvh;
+    transform: rotate(0);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+header.open .header-menu {
+    opacity: 1;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-menu a {
+    font-family: Consolas;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgba(230, 255, 83, 1);
+    z-index: 100;
+}
+
+#toggleBtn {
+    background: rgba(128, 0, 255, 1);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#toggleBtn::before,
+#toggleBtn::after {
+    content: "";
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 20%;
+}
+
+#toggleBtn::before {
+    height: 100%;
+    width: 20%;
+    transform: rotate(0deg);
+}
+
+#toggleBtn::after {
+    height: 20%;
+    width: 100%;
+}
+
+header.open #toggleBtn {
+    width: 100dvw;
+    height: 20dvh;
+    position: absolute;
+    background-color: rgba(128, 0, 255, 1);
+}
+
+header.open #toggleBtn::before,
+header.open #toggleBtn::after {
+    height: 0;
+    width: 0;
+}
+
+.engineer,
+.about-me {
+    white-space: normal;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.engineer {
+    top: -8dvh;
+    left: 2dvw;
+}
+
+.about-me {
+    bottom: -8dvh;
+    left: 2dvw;
+}
+
+h2 {
+    font-family: Minecraft;
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+.chto {
+    position: absolute;
+    top: 57%;
+    left: 43%;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    .main-card {
+        width: 90dvw;
+        margin-left: 20dvw;
+        border-radius: 30px 0 0 30px;
+    }
+
+    .myname,
+    .animated-text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .animated-text::after {
+        width: 10px;
+        height: 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .text-from-me {
+        margin-top: 16dvh;
+    }
+
+    .engineer {
+        left: 8dvw;
+    }
+
+    .about-me {
+        left: 8dvw;
+    }
+}

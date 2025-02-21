@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenis + GSAP Scroll</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+        <section class="section section-1">
+            <header id="header">
+                <button id="toggleBtn"></button>
+                <nav class="header-menu">
+                    <a href="#">about</a>
+                    <a href="#">experience</a>
+                    <a href="#">tools</a>
+                    <a href="#">projects</a>
+                    <a href="#">contact</a>
+                </nav>
+            </header>
+            <div class="main-card">
+                <div class="engineer"><h2>frontend engineer</h2></div>
+                <div class="about-me"><h2>about</h2></div>
+                <div class="chto"><img src="/image/chto.svg" alt=""></div>
+                <div class="text-from-me">
+                    <span class="myname">Ainur:~$&nbsp;</span>
+                    <h1 class="animated-text">n</h1>
+                </div>
+            </div>
+
+        </section>
+        <div class=" horizontal-wrapper">
+            <div class="horizontal">
+                <section class="section section-2">
+
+                </section>
+                <section class=" section section-3">Раздел 3</section>
+            </div>
+        </div>
+        <section class=" section section-4">Раздел 4</section>
+        <section class="section section-" 5>Раздел 5</section>
+        <section class="section section-6">Раздел 6</section>
+    </div>
+
+    <!-- Подключаем Lenis и GSAP через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+
+    <script>
+        document.getElementById("toggleBtn").addEventListener("click", function () {
+            document.getElementById("header").classList.toggle("open");
+        });
+
+    </script>
+
+    <script>
+        const words = ["привет!", "меня зовут Айнур", "представляю своё резюме", "листай вниз :-)"];
+        let index = 0;
+        const textElement = document.querySelector(".animated-text");
+
+        function typeText(word, callback) {
+            textElement.textContent = "";
+            let i = 0;
+            let typing = setInterval(() => {
+                textElement.textContent += word[i];
+                i++;
+                if (i === word.length) {
+                    clearInterval(typing);
+                    setTimeout(() => eraseText(callback), 1000);
+                }
+            }, 100);
+        }
+
+        function eraseText(callback) {
+            let text = textElement.textContent;
+            let i = text.length;
+            let erasing = setInterval(() => {
+                textElement.textContent = text.slice(0, --i);
+                if (i === 0) {
+                    clearInterval(erasing);
+                    callback();
+                }
+            }, 50);
+        }
+
+        function cycleWords() {
+            typeText(words[index], () => {
+                index = (index + 1) % words.length;
+                cycleWords();
+            });
+        }
+
+        cycleWords();
+
+    </script>
+
+    <script>
+        // Инициализация Lenis
+        const lenis = new Lenis({
+            smooth: true
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        // Инициализация GSAP + ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger)
+
+        let horizontal = document.querySelector('.horizontal')
+        let sections = gsap.utils.toArray('.horizontal .section') // Только горизонтальные секции
+
+        gsap.to(horizontal, {
+            x: () => `-${horizontal.scrollWidth - window.innerWidth}px`, // Двигаем на точное расстояние
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.horizontal-wrapper',
+                start: 'top top',
+                end: () => `+=${horizontal.scrollWidth - window.innerWidth}`, // Корректный конец анимации
+                pin: true,
+                scrub: 1,
+                anticipatePin: 1
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -90,16 +90,25 @@
                 </div>
                 <div class="swiper swiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="image/project-plash.svg" alt="">
-                            <div class="slide-text">1</div>
+                        <div class="swiper-slide slide-pl">
+                            <img src="image/project-plash.svg" alt="">
+                            <img src="image/project-plash.svg" alt="">
                         </div>
-                        <div class="swiper-slide"><img src="image/project-plash.svg" alt="">
-                            <div class="slide-text">2</div>
+                        <div class="swiper-slide slide-pl">
+                            <img src="image/project-plash.svg" alt="">
+                            <img src="image/project-plash.svg" alt="">
                         </div>
-                        <div class="swiper-slide"><img src="image/project-plash.svg" alt="">
-                            <div class="slide-text">3</div>
+                        <div class="swiper-slide slide-pl">
+                            <img src="image/project-plash.svg" alt="">
+                            <img src="image/project-plash.svg" alt="">
+                        </div>
+                        <div class="swiper-slide slide-pl">
+                            <img src="image/project-plash.svg" alt="">
+                            <img src="image/project-plash.svg" alt="">
                         </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -122,8 +131,12 @@
         });
 
         const swiper2 = new Swiper('.swiper2', {
-            loop: true,
-            spaceBetween: 1,
+            loop: false,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper2 .swiper-button-next',
+                prevEl: '.swiper2 .swiper-button-prev',
+            },
         });
     </script>
 

@@ -430,21 +430,17 @@ h3 {
 }
 
 .swiper {
-    width: 80%;
-    height: 60vh;
+    max-width: 80dvw;
+    max-height: 60dvh;
 }
 
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
     text-align: center;
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
     position: relative;
 }
 
@@ -453,4 +449,26 @@ h3 {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 10px;
+}
+
+/* ------------------------ почти ----------------------- */
+
+.proj {
+    position: absolute;
+    left: 0;
+    margin-bottom: 20dvh;
+}
+
+.swiper2 {
+    max-width: 50dvw;
+}
+
+.slide-pl {
+    z-index: 10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 50dvh;
+    flex-wrap: wrap;
 }

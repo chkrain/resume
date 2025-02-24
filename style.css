@@ -71,7 +71,7 @@ html {
     font-family: Consolas;
     border-right: 2px solid black;
     display: inline-block;
-    white-space: wrap;
+    white-space: normal;
     overflow: hidden;
     max-width: 33dvw;
     z-index: 1;
@@ -363,6 +363,7 @@ h2 {
 .gde-to {
     position: relative;
     margin-left: 26dvw;
+    margin-top: 12dvh;
 }
 
 .lrg-3 {
@@ -402,4 +403,32 @@ h3 {
     right: 0;
     z-index: -1;
     top: 10dvw;
+}
+
+
+/* --------------------- 4 ---------------------- */
+
+.section-4-head {
+    position: relative;
+    width: 100dvw;
+}
+
+.section-4-head h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.stars {
+    position: absolute;
+    right: 0;
+}
+
+.tools {
+    position: absolute;
+    left: 16dvw;
+
+}
+
+.swiper {
+    max-width: 60dvw;
 }

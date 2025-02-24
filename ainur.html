@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My resume</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
     </style>
@@ -59,21 +60,49 @@
                         <h3>1111111111111111111111111111
                         </h3>
                     </div>
-                    <img class="s-cho-1" src="/image/chto.svg" alt=""><img class="s-cho-2" src="/image/chto.svg" alt="">
+                    <img class="s-cho-1" src="image/chto.svg" alt=""><img class="s-cho-2" src="image/chto.svg" alt="">
                     <img class="s-2-v" src="image/s-2-v.svg" alt="">
                 </section>
             </div>
         </div>
-        <section class=" section section-4">Раздел 4</section>
-        <section class="section section-" 5>Раздел 5</section>
+        <section class=" section section-4">
+            <div class="section-4-head">
+                <h2 class="tools">tools</h2>
+                <img class="stars" src="image/stars.svg" alt="">
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image/tools-img-1.svg" alt="">
+                        <div class="slide-text"></div>
+                    </div>
+                    <div class="swiper-slide"><img src="image/tools-img-2.svg" alt="">
+                        <div class="slide-text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-5">
+            <img class="proj" src="image/projects.svg" alt="">
+            <div class="projects-container"></div>
+        </section>
         <section class="section section-6">Раздел 6</section>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: false,
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 60,
+        });
+    </script>
 
     <script>
         document.getElementById("toggleBtn").addEventListener("click", function () {

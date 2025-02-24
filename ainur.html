@@ -70,7 +70,7 @@
                 <h2 class="tools">tools</h2>
                 <img class="stars" src="image/stars.svg" alt="">
             </div>
-            <div class="swiper">
+            <div class="swiper swiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="image/tools-img-1.svg" alt="">
                         <div class="slide-text"></div>
@@ -83,7 +83,25 @@
         </section>
         <section class="section section-5">
             <img class="proj" src="image/projects.svg" alt="">
-            <div class="projects-container"></div>
+            <div class="projects-container">
+                <div class="projects-menu">
+                    <h2 class="projectspro">projects</h2>
+                    <h2 class="contactpro">contact</h2>
+                </div>
+                <div class="swiper swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="image/project-plash.svg" alt="">
+                            <div class="slide-text">1</div>
+                        </div>
+                        <div class="swiper-slide"><img src="image/project-plash.svg" alt="">
+                            <div class="slide-text">2</div>
+                        </div>
+                        <div class="swiper-slide"><img src="image/project-plash.svg" alt="">
+                            <div class="slide-text">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="section section-6">Раздел 6</section>
     </div>
@@ -96,11 +114,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiper1 = new Swiper('.swiper1', {
             loop: false,
             slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 60,
+        });
+
+        const swiper2 = new Swiper('.swiper2', {
+            loop: true,
+            spaceBetween: 1,
         });
     </script>
 

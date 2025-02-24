@@ -430,5 +430,27 @@ h3 {
 }
 
 .swiper {
-    max-width: 60dvw;
+    width: 80%;
+    height: 60vh;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+.slide-text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
 }

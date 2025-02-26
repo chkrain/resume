@@ -275,6 +275,7 @@ h2 {
     font-family: Minecraft;
     font-size: 64px;
     line-height: 1.2;
+    z-index: 1000;
 }
 
 .chto {

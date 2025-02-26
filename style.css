@@ -22,7 +22,7 @@ html {
 
 
 body {
-    cursor: url('image/default-cursor.svg') 24 24, auto;
+    cursor: url('image/default-cursor.svg') 16 16, auto;
 }
 
 a,
@@ -30,15 +30,15 @@ button,
 #header,
 .swiper-button-next-2,
 .swiper-button-prev-2 {
-    cursor: url('image/pointer.svg') 24 24, pointer !important;
+    cursor: url('image/pointer.svg') 16 16, pointer !important;
 }
 
 .swiper .swiper-slide img {
-    cursor: url('image/grab-pointer.svg') 24 24, pointer !important;
+    cursor: url('image/grab-pointer.svg') 16 16, pointer !important;
 }
 
 .swiper .swiper-slide img:active {
-    cursor: url('image/grabbed.svg') 24 24, pointer !important;
+    cursor: url('image/grabbed.svg') 16 16, pointer !important;
 }
 
 html {
@@ -628,6 +628,16 @@ h3 {
     bottom: 2dvw;
 }
 
+#contact a {
+    display: inline-block;
+}
+
+#contact img {
+    transform: rotate(90deg);
+    margin-bottom: 1dvh;
+    display: block;
+}
+
 .swiper-buttons-container {
     position: relative;
     max-width: 60%;
@@ -667,6 +677,14 @@ h3 {
     .swiper2 .swiper-slide img {
         transform: scale(0.5);
     }
+
+    .slide-pl {
+        min-height: 30dvh;
+    }
+
+    .swiper2 .swiper-slide img {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 1430px) and (min-width: 1024px) {
@@ -686,3 +704,48 @@ h3 {
 }
 
 /* ------------------- вот он момент истины ------------------ */
+.section-6 {
+    position: relative;
+}
+
+.section-6-container {
+    width: 80dvw;
+    height: 50dvh;
+    background-color: rgba(128, 0, 255, 1);
+    border-radius: 30px;
+}
+
+.section-6-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.last-arrow,
+.nuchotam {
+    position: absolute;
+}
+
+.last-arrow {
+    transform: rotate(-90deg);
+    right: 4dvw;
+    bottom: 16dvh;
+}
+
+.nuchotam {
+    top: 80dvh;
+    left: 0;
+}
+
+.zvezda {
+    position: absolute;
+    top: 8dvh;
+    left: 69dvw;
+}
+
+.zvezda-2 {
+    position: absolute;
+    top: 14dvh;
+    left: 32dvw;
+}

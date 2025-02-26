@@ -1,1 +1,1 @@
-Пока что какая-то залупа выходит
+developed by Cherepanov Ainur

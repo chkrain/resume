@@ -21,9 +21,9 @@
                 <nav class="header-menu">
                     <a href="#about">about</a>
                     <a href="#experience">experience</a>
-                    <a href="#">tools</a>
-                    <a href="#">projects</a>
-                    <a href="#">contact</a>
+                    <a href="#tools">tools</a>
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
                 </nav>
             </header>
             <div class="main-card">
@@ -67,7 +67,7 @@
         </div>
         <section class=" section section-4">
             <div class="section-4-head">
-                <h2 class="tools">tools</h2>
+                <h2 class="tools" id="tools">tools</h2>
                 <img class="stars" src="image/stars.svg" alt="">
             </div>
             <div class="swiper swiper1">
@@ -85,8 +85,8 @@
             <img class="proj" src="image/projects.svg" alt="">
             <div class="projects-container">
                 <div class="projects-menu">
-                    <h2 class="projectspro">projects</h2>
-                    <h2 class="contactpro">contact</h2>
+                    <h2 class="projectspro" id="projects">projects</h2>
+                    <h2 class="contactpro" id="contact">contact</h2>
                 </div>
                 <div class="swiper swiper2">
                     <div class="swiper-wrapper">
@@ -115,6 +115,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                let targetId = this.getAttribute("href");
+                let target = document.querySelector(targetId);
+
+                if (target) {
+                    gsap.to(window, {
+                        duration: 1.8,
+                        scrollTo: { y: target, autoKill: false },
+                        ease: "power2.out"
+                    });
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        window.addEventListener("hashchange", function () {
+            let hash = location.hash;
+            if (hash) {
+                let target = document.querySelector(hash);
+                if (target) {
+                    gsap.to(window, {
+                        duration: 1,
+                        scrollTo: { y: target.offsetTop, autoKill: false },
+                        ease: "power2.out"
+                    });
+                }
+            }
+        });
+
+    </script>
 
     <script>
         const swiper1 = new Swiper('.swiper1', {
@@ -226,7 +262,7 @@
                 start: 'top top',
                 end: () => `+=${horizontal.scrollWidth - window.innerWidth}`,
                 pin: true,
-                scrub: 1,
+                scrub: 2,
                 anticipatePin: 1
             }
         })

@@ -20,6 +20,31 @@ html {
     scroll-behavior: auto !important;
 }
 
+
+body {
+    cursor: url('image/default-cursor.svg') 24 24, auto;
+}
+
+a,
+button,
+#header,
+.swiper-button-next-2,
+.swiper-button-prev-2 {
+    cursor: url('image/pointer.svg') 24 24, pointer !important;
+}
+
+.swiper .swiper-slide img {
+    cursor: url('image/grab-pointer.svg') 24 24, pointer !important;
+}
+
+.swiper .swiper-slide img:active {
+    cursor: url('image/grabbed.svg') 24 24, pointer !important;
+}
+
+html {
+    scroll-behavior: auto !important;
+}
+
 .resume {
     width: 100dvw;
 }

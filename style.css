@@ -323,7 +323,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 1320px) and (min-width: 1024px) {
+@media screen and (max-width: 1430px) and (min-width: 1024px) {
     h2 {
         font-size: 48px;
     }
@@ -415,7 +415,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 1320px) and (min-width: 1024px) {
+@media screen and (max-width: 1430px) and (min-width: 1024px) {
     .section-2 .lrg-2 {
         transform: scale(1);
     }
@@ -490,7 +490,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 1320px) and (min-width: 1024px) {
+@media screen and (max-width: 1430px) and (min-width: 1024px) {
     .lrg-3 {
         transform: scale(1);
     }
@@ -561,7 +561,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 1320px) and (min-width: 1024px) {
+@media screen and (max-width: 1430px) and (min-width: 1024px) {
     .swiper1 .swiper-slide img {
         transform: scale(0.8);
     }
@@ -668,7 +668,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 1320px) and (min-width: 1024px) {
+@media screen and (max-width: 1430px) and (min-width: 1024px) {
     .proj {
         transform: scale(0.8);
         left: -10dvw;

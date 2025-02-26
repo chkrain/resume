@@ -98,17 +98,11 @@
                             <img src="image/project-plash.svg" alt="">
                             <img src="image/project-plash.svg" alt="">
                         </div>
-                        <div class="swiper-slide slide-pl">
-                            <img src="image/project-plash.svg" alt="">
-                            <img src="image/project-plash.svg" alt="">
-                        </div>
-                        <div class="swiper-slide slide-pl">
-                            <img src="image/project-plash.svg" alt="">
-                            <img src="image/project-plash.svg" alt="">
-                        </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-buttons-container">
+                        <div class="swiper-button-prev-2"><img src="image/arr.svg" alt=""></div>
+                        <div class="swiper-button-next-2"><img src="image/arr.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -128,15 +122,35 @@
             slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 60,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 1.6,
+                },
+                1280: {
+                    slidesPerView: 2,
+                }
+            }
         });
 
         const swiper2 = new Swiper('.swiper2', {
-            loop: false,
+            loop: true,
             slidesPerView: 1,
             navigation: {
-                nextEl: '.swiper2 .swiper-button-next',
-                prevEl: '.swiper2 .swiper-button-prev',
+                nextEl: '.swiper2 .swiper-button-next-2',
+                prevEl: '.swiper2 .swiper-button-prev-2',
             },
+            breakpoints: {
+                320: {
+                    loop: false,
+                },
+                1024: {
+                    loop: true,
+                }
+            }
         });
     </script>
 

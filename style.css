@@ -258,7 +258,8 @@ h2 {
     left: 43%;
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
     header {
         display: none;
     }
@@ -297,6 +298,22 @@ h2 {
     }
 }
 
+@media screen and (max-width: 1320px) and (min-width: 1024px) {
+    h2 {
+        font-size: 48px;
+    }
+
+    .myname,
+    .animated-text {
+        font-size: 36px;
+    }
+
+    .animated-text::after {
+        width: 20px;
+        height: 36px;
+    }
+}
+
 .cont-1-1,
 .cont-1-2 {
     position: absolute;
@@ -313,7 +330,13 @@ h2 {
     bottom: 10dvh;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
+    .cont-1-2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
     .cont-1-2 {
         left: calc(89dvw - 18px);
         top: 24dvh;
@@ -350,6 +373,32 @@ h2 {
     position: absolute;
     top: 40dvh;
     left: 80dvw;
+}
+
+@media screen and (max-width: 1024px) {
+    .section-2 .lrg-2 {
+        transform: scale(0.5);
+    }
+
+    .cont-2 {
+        display: none;
+    }
+
+    .section {
+        max-width: 100dvw;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 1320px) and (min-width: 1024px) {
+    .section-2 .lrg-2 {
+        transform: scale(1);
+    }
+
+    .cont-2 {
+        left: 60dvw;
+        transform: scale(0.5)
+    }
 }
 
 /* ------------- 3 ----------------- */
@@ -405,6 +454,27 @@ h3 {
     top: 10dvw;
 }
 
+@media screen and (max-width: 1024px) {
+    .lrg-3 {
+        transform: scale(0.5);
+    }
+
+    .s-cho-1,
+    .s-cho-2 {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 1320px) and (min-width: 1024px) {
+    .lrg-3 {
+        transform: scale(1);
+    }
+
+    .s-2-v {
+        top: 32dvh;
+    }
+
+}
 
 /* --------------------- 4 ---------------------- */
 
@@ -451,16 +521,61 @@ h3 {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+    .stars {
+        display: none;
+    }
+
+    .swiper1 {
+        width: 100dvw;
+        max-width: none;
+    }
+
+    .swiper1 .swiper-slide img {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 1320px) and (min-width: 1024px) {
+    .swiper1 .swiper-slide img {
+        transform: scale(0.8);
+    }
+}
+
+
+
 /* ------------------------ почти ----------------------- */
 
 .proj {
     position: absolute;
     left: 0;
-    margin-bottom: 20dvh;
+    top: 10dvh;
+}
+
+.projects-menu {
+    width: 66dvw;
+    height: 56dvh;
+    background-color: rgba(128, 0, 255, 1);
+    border-radius: 30px;
+    position: relative;
+    margin-top: 40dvh;
+    margin-right: 20dvw;
+}
+
+.section-5 {
+    position: relative;
 }
 
 .swiper2 {
     max-width: 50dvw;
+    position: absolute !important;
+    top: 10dvh;
+    right: 10dvw;
+}
+
+.swiper2 .swiper-slide img {
+    margin-top: 4dvh;
+    cursor: grab;
 }
 
 .slide-pl {
@@ -472,3 +587,76 @@ h3 {
     min-height: 50dvh;
     flex-wrap: wrap;
 }
+
+.projects-menu h2 {
+    position: absolute;
+    left: 4dvw;
+    margin: 0;
+}
+
+.projectspro {
+    top: -4dvh;
+}
+
+.contactpro {
+    bottom: 2dvw;
+}
+
+.swiper-buttons-container {
+    position: relative;
+    max-width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    z-index: 100;
+    max-height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swiper-button-next-2,
+.swiper-button-prev-2 {
+    max-width: 30%;
+    cursor: pointer;
+}
+
+.swiper-button-prev-2 {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .proj,
+    .swiper-button-next-2,
+    .swiper-button-prev-2 {
+        display: none;
+    }
+
+    .swiper2 {
+        max-width: 100dvw;
+        right: 0;
+    }
+
+    .swiper2 .swiper-slide img {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 1320px) and (min-width: 1024px) {
+    .proj {
+        transform: scale(0.8);
+        left: -10dvw;
+    }
+
+    .swiper2 {
+        max-width: 60dvw;
+        right: 0;
+    }
+
+    .swiper2 .swiper-slide img {
+        transform: scale(0.9);
+    }
+}
+
+/* ------------------- вот он момент истины ------------------ */

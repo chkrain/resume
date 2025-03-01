@@ -482,13 +482,22 @@ h3 {
 
 @media screen and (max-width: 1024px) {
     .lrg-3 {
-        transform: scale(0.5);
+        transform: scale(0.6);
     }
 
     .s-cho-1,
     .s-cho-2 {
         transform: scale(0.5);
     }
+
+    .gde-to h3 {
+        top: 25%;
+        left: 30%;
+        max-width: 40%;
+        max-height: 36%;
+        overflow: auto;
+    }
+
 }
 
 @media screen and (max-width: 1430px) and (min-width: 1024px) {
@@ -498,6 +507,12 @@ h3 {
 
     .s-2-v {
         top: 32dvh;
+    }
+
+    .gde-to h3 {
+        top: 8%;
+        left: 6%;
+        max-width: 90%;
     }
 
 }
@@ -540,11 +555,23 @@ h3 {
     position: relative;
 }
 
+.swiper1 .swiper-slide img {
+    position: relative;
+}
+
 .slide-text {
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 10px;
+    width: 60%;
+    top: 30%;
+    left: 20%;
+    color: rgba(0, 0, 0, 1);
+    font-family: Consolas;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    z-index: 100;
+    text-align: left;
+    white-space: normal;
 }
 
 @media screen and (max-width: 1024px) {
@@ -558,13 +585,36 @@ h3 {
     }
 
     .swiper1 .swiper-slide img {
-        transform: scale(0.5);
+        transform: scale(0.8);
+    }
+
+    .slide-text {
+        width: 36%;
+        top: 30%;
+        left: 34%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .in-text h3 {
+        top: 30%;
+        left: 30%;
+        max-width: 40%;
+        max-height: 36%;
+        overflow: auto;
     }
 }
 
 @media screen and (max-width: 1430px) and (min-width: 1024px) {
     .swiper1 .swiper-slide img {
-        transform: scale(0.8);
+        transform: scale(1);
+    }
+
+    .in-text h3 {
+        top: 12%;
+        left: 6%;
+        max-width: 90%;
     }
 }
 
@@ -612,6 +662,14 @@ h3 {
     flex-direction: column;
     min-height: 50dvh;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.slide-pl a h2 {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    color: black;
 }
 
 .projects-menu h2 {

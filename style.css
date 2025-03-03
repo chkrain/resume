@@ -768,9 +768,11 @@ h3 {
 
 .section-6-container {
     width: 80dvw;
-    height: 50dvh;
+    height: 30dvh;
     background-color: rgba(128, 0, 255, 1);
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .section-6-container ul {
@@ -778,6 +780,24 @@ h3 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.stick-section {
+    width: 2px;
+    height: 123px;
+    max-height: 70%;
+    background-color: black;
+}
+
+.section-6-container ul img {
+    transition: all .3s ease;
+}
+
+.section-6-container ul a:hover img {
+    transform: scale(1.1);
+    transition: all .3s ease;
 }
 
 .last-arrow,
@@ -806,4 +826,14 @@ h3 {
     position: absolute;
     top: 14dvh;
     left: 32dvw;
+}
+
+@media screen and (max-width: 1280px) {
+    .section-6-container ul img {
+        transform: scale(0.5);
+    }
+
+    .section-6-container ul a:hover img {
+        transform: scale(0.55);
+    }
 }

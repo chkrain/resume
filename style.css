@@ -837,3 +837,36 @@ h3 {
         transform: scale(0.55);
     }
 }
+
+/* Резюме на мобилах */
+
+@media screen and (max-width: 1024px) {
+    body>*:not(.mobile-resume) {
+        display: none !important;
+    }
+
+    .mobile-resume {
+        display: flex;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.mobile-resume {
+    display: none;
+}
+
+.mobile-resume h2 {
+    font-family: Minecraft;
+    font-size: 36px;
+    line-height: 1.2;
+    z-index: 1000;
+}
+
+.mobile-resume h3 {
+    color: rgba(0, 0, 0, 1);
+    font-family: Consolas;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}

@@ -874,3 +874,30 @@ h3 {
 .mobile-resume {
     display: none;
 }
+
+.telegram,
+.github,
+.whatsapp {
+    position: relative;
+    display: inline-block;
+}
+
+.qr-code {
+    position: absolute;
+    top: -30svh;
+    left: 50%;
+    transform: translateX(-100%) translateY(2dvw);
+    width: 100px;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.telegram:hover .qr-code,
+.github:hover .qr-code,
+.whatsapp:hover .qr-code {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-100%) translateY(-2dvw);
+}

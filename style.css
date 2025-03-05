@@ -8,6 +8,17 @@
     src: url(fonts/consolas.ttf);
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 121px;
+    background: rgba(127, 0, 255, 1);
+    border-radius: 10px;
+}
+
 html,
 body {
     margin: 0;
